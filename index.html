@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEAVENLY SPIRITS</title>
+  <link rel="icon" type="image/x-icon" href="pics/rumglass.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accountstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+</head>
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 0px;
+    background-color: #ffffff;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  .active .bar:before,
+  .active .bar:after {
+    /* content: '';s */
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #ffffff;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .active .bar:before {
+    top: -10px;
+  }
+
+  .active .bar:after {
+    top: 10px;
+  }
+
+  .scrolled {
+    background-color: #444;
+  }
+
+
+  @media (max-width: 1200px) {
+    .nav-list {
+      display: none;
+      position: fixed;
+      top: 85px;
+      right: 0;
+      width: 250px;
+      height: calc(100vh - 80px);
+      backdrop-filter: blur(16px);
+      background-color: rgba(0, 0, 0, 0.8);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      z-index: 1000;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-list.active {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .nav-list li {
+      padding: 10px;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width:450px) {
+    .cart {
+      max-width: 430px;
+      width: 377px;
+    }
+
+    .cart>.cart-items>.cart-item>span {
+      font-size: 19px;
+    }
+
+  }
+</style>
+
+<body>
+  <header>
+    <nav class="nav" style="position: fixed; z-index: 999;backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.5); ">
+      <div>
+        <img class="navlogo" src="pics/heavenly spirits logo.png" alt="">
+      </div>
+      <div class="navmiddle">
+        <button class="hamburger">
+          <span class="bar">☰</span>
+        </button>
+        <ul class="navul nav-list">
+          <li class="navli"><a href="#hero">HOME</a></li>
+          <li class="navli"><a href="#second">SHOP</a></li>
+          <li class="navli"><a href="#footer-smooth">ABOUT US</a></li>
+          <li class="navli"><a href="#fifth">CONTACT</a></li>
+          <li class="navli"><a href="loginsignup.html">ACCOUNT</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <div id="main">
+
+    <div id="hero">
+
+
+      <div id="heading">
+        <div class="heading-elem">
+          <h1 class="headingelem">HEAVENLY</h1>
+        </div>
+        <div id="blocktext">
+          <h1 class="headingelem" id="secondh1">SPIRITS</h1>
+          <h5>based in india</h5>
+        </div>
+      </div>
+      <div id="herofooter">
+        <a href="https://www.instagram.com/onlyharshrana/">Designed by Harsh Rana<i
+            class="ri-arrow-right-up-line"></i></a>
+        <a href="https://www.instagram.com/spiritsheavenly/">@spiritsheavenly <i class="ri-arrow-right-up-line"></i></a>
+
+      </div>
+    </div>
+
+
+
+    <div id="page2">
+      <div id="moving-text">
+        <div class="con">
+          <h1>WHISKY</h1>
+          <div id="gola"></div>
+          <h1>VODKA</h1>
+          <div id="gola"></div>
+          <h1>TEQUILA</h1>
+          <div id="gola"></div>
+        </div>
+        <div class="con">
+          <h1>WHISKY</h1>
+          <div id="gola"></div>
+          <h1>VODKA</h1>
+          <div id="gola"></div>
+          <h1>TEQUILA</h1>
+          <div id="gola"></div>
+        </div>
+        <div class="con">
+          <h1>WHISKY</h1>
+          <div id="gola"></div>
+          <h1>VODKA</h1>
+          <div id="gola"></div>
+          <h1>TEQUILA</h1>
+          <div id="gola"></div>
+        </div>
+      </div>
+
+      <div id="page2-bottom">
+        <div class="bottom-part1">
+
+          <h1>"When we drink we get drunk. When we get drunk we fall asleep. When we fall asleep we commit no
+            sin. When we commit no sin we go to heaven. Sooooo, let's all get drunk and go to heaven!" <br>
+            ~ Brian O'Rourke</h1>
+        </div>
+
+        <div id="bottom-part2">
+          <img src="pics/bottompart2.jpg" alt="">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="second">
+      <div id="elem-container">
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="whisky.html" target="_blank" target="_blank">WHISKY</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky3.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky4.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="whisky.html"><img src="pics/whisky6.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="tequila.html" target="_blank">TEQUILA</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila3.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila4.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="tequila.html"><img src="pics/tequila6.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="vodka.html" target="_blank">VODKA</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka3.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka4.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="vodka.html"><img src="pics/vodka6.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="rum.html" target="_blank">RUM</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum3.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum4].png" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="rum.html"><img src="pics/rum6.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="brandy.html" target="_blank">BRANDY</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy3.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy4.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="brandy.html"><img src="pics/brandy6.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element" style="border-top: 1px solid #ffffff64;;">
+          <h1><a href="gin.html" target="_blank">GIN</a></h1>
+
+          <div class="gallery">
+            <div class="seventhpart-grid">
+
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle1.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle2.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle3.png" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle4.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle5.jpg" alt=""></a>
+              </div>
+              <div class="grid-item grow">
+                <a href="gin.html"><img src="pics/ginbottle6.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="third">
+      <video autoplay loop muted src="video 1.mp4"></video>
+    </div>
+
+
+    <div id="fifth">
+      <div class="newsletter">
+        <img src="pics/heavenly spirits logo.png" alt="" height="20vh" width="">
+
+        <h3>Get News & Offers</h3>
+        <h4>Subscribe us & Get 25% Off.</h4>
+
+        <div class="newsletter-email">
+          <div><input class="newsletter-input" text="email" name="" id="" placeholder="Your Email"></div>
+          <div><button class="newsletter-button">Subscribe</button></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer id="footer-smooth">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Heavenly Spirits</h3>
+          <p>Discover the artistry and passion behind Heavenly Spirits, crafting exceptional libations for
+            your enjoyment.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@heavenlyspirits.com</p>
+          <p>Phone: 1-800-HEAVENLY</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect with Us</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Heavenly Spirits. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+      <p>&#8593;</p>
+    </button>
+
+
+
+
+
+  </div>
+
+
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.nav-list');
+    const headerLinks = document.querySelectorAll('.navli a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    document.addEventListener('scroll', () => {
+      var scroll_position = window.scrollY;
+      if (scroll_position > 250) {
+        header.style.backgroundColor = "#29323c";
+      } else {
+        header.style.backgroundColor = "transparent";
+      }
+    });
+
+    headerLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+      }
+    }
+
+    function scrollToTop() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+</body>
+
+</html>

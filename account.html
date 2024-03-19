@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="accountstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "General Sans";
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            max-height: 600px;
+            width: 33vw;
+            height: fit-content;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* position: absolute;
+            top: 100px;
+            right: 33%; */
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            font-family: 'Forum';
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width:29vw;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 80%;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 8vh;
+            font-size: 1.5rem;
+            font-family: 'Forum';
+        }
+
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .left-content .login-link a{
+            color: #fff;
+        }
+        .nodisplay {
+            display: none;
+        }
+
+        #main {
+            /* background-image: url('logo/bg_4.jpg');
+            background-size: cover; */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #main img {
+            height: fit-content;
+            width: fit-content;
+
+        }
+        label,h2{
+            font-family: 'Forum';
+           
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="signup-container">
+            <div class="container-left">
+                <div class="left-content">
+                    <h3>WELCOME !</h3>
+                    <div>
+                        <h1>HEAVENLY</h1>
+                        <span id="spirit-text">SPIRITS</span>
+                    </div>
+                    <div class="login-link" >
+                        <p>Already have an account? <a href="#" id="signin-link">Login</a></p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="container-right">
+                <div class="right-content">
+                    <div class="login-container" id="signup">
+                        <h2>Sign Up</h2>
+                        <form id="signup-form" action="#login">
+                            <label for="signupUsername">Username</label>
+                            <input type="text" id="signupUsername" name="signupUsername" required>
+
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" name="signupEmail" required>
+
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="signupPassword" required>
+
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required>
+
+                            <div style="display: flex; justify-content: center; width: 100%;">
+                                <input type="submit" value="Signup">
+                            </div>
+                        </form>
+
+                        
+                    </div>
+
+                    <div class="login-container" id="login" style="display: none;">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" id="loginUsername" name="loginUsername" required>
+        
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="loginPassword" required>
+                            <div style="display: flex; justify-content: center; width: 100%;">
+                                <input type="submit" value="Login">
+                            </div>
+                            <div class="login-link">
+                                <p>Not a member yet? <a href="#" id="signup-link">Sign Up</a></p>
+                            </div>
+                    </div>
+                         </form>
+                </div>
+            </div>
+
+
+
+
+            
+
+
+        </div>
+
+        <script>
+            document.getElementById('signup-link').addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('signup').style.display = 'block';
+            });
+
+            document.getElementById('signin-link').addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById('signup').style.display = 'none';
+                document.getElementById('login').style.display = 'block';
+            });
+
+            document.getElementById('signup-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                var username = document.getElementById('signupUsername').value;
+                var email = document.getElementById('signupEmail').value;
+                var password = document.getElementById('signupPassword').value;
+                var confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+
+                var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+                for (var i = 0; i < existingUsers.length; i++) {
+                    if (existingUsers[i].username === username) {
+                        alert("Username already exists! Please choose another one.");
+                        return;
+                    }
+                }
+
+                var newUser = { username: username, email: email, password: password };
+                existingUsers.push(newUser);
+                localStorage.setItem('users', JSON.stringify(existingUsers));
+
+                alert("User registered successfully!");
+                document.getElementById('signup-form').reset();
+            });
+
+            document.getElementById('login-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                var username = document.getElementById('loginUsername').value;
+                var password = document.getElementById('loginPassword').value;
+
+                var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+                for (var i = 0; i < existingUsers.length; i++) {
+                    if (existingUsers[i].username === username && existingUsers[i].password === password) {
+                        alert("Login successful!");
+                
+                        window.location.href = 'index.html';
+                        return;
+                    }
+                }
+
+                alert("Invalid username or password!");
+            });
+        </script>
+
+</body>
+
+</html>
